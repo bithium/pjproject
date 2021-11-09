@@ -699,6 +699,7 @@ static void get_video_window_id(pj_cli_dyn_choice_param *param)
 	}
     }
 }
+#endif
 
 static void get_call_id(pj_cli_dyn_choice_param *param)
 {
@@ -737,7 +738,6 @@ static void get_call_id(pj_cli_dyn_choice_param *param)
     }
 }
 
-#endif
 
 static void get_choice_value(pj_cli_dyn_choice_param *param)
 {
@@ -772,10 +772,10 @@ static void get_choice_value(pj_cli_dyn_choice_param *param)
     case DYN_CHOICE_WIN_ID:
 	get_video_window_id(param);
 	break;
+#endif
     case DYN_CHOICE_CALL_ID:
 	get_call_id(param);
 	break;
-#endif
     default:
 	param->cnt = 0;
 	break;
